@@ -1,0 +1,22 @@
+{
+  "id": 1,
+  "name": "Basic Shot",
+  "cost": 1,
+  "cardtype": "short",
+  "cardtext": "Lorum Ipsum solem dolorum bladiebla",
+  "cardimage": "",
+  "stats": {
+    "atk": 1,
+    "atk-type": "bullet"
+  },
+  "triggers": [
+    [
+      [
+        "create"
+      ],
+      [
+        "attack"
+      ]
+    ]
+  ]
+}
