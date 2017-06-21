@@ -135,15 +135,16 @@
         {
             "description" : "Type of card",
             "type":"string",
-            "enum":["troop", "short","influence"]
+            "enum":["troop", "shot","influence"]
         },
         
         "stats": {"$ref": "#/definitions/stats" },
         "triggers" : {"$ref" : "#/definitions/triggers"},
-        "cardtextfields": {"$ref" : '#/definitions/cardtextfields'},
+        "cardtextfields": {"$ref" : "#/definitions/cardtextfields"},
         "zone": {
             "type" : "string", 
             "enum": ["out", "hand", "field", "market"   
             ]
         }
+}
 }

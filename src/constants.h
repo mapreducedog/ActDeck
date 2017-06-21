@@ -13,11 +13,14 @@ namespace constants {
         market,
         nr_zones,
     };
-    std::array<std::string, nr_zones> zones = {
-        {"out",
-        "hand",
-        "field",
-        "market" }};
+    std::array<std::string, nr_zones>  zones = {
+    {"out",
+    "hand",
+    "field",
+    "market" 
+        
+    }};
+
     enum cardtypes_enum 
     {
         troop,
@@ -25,6 +28,7 @@ namespace constants {
         influence,
         nr_cardtypes
     };
+    
     std::array<std::string, nr_cardtypes> cardtypes = {
     {
         "troop",
@@ -39,7 +43,8 @@ namespace constants {
         spc,
         nr_stats
     };
-    std::array<std::string, nr_stats> stats = {
+    
+     std::array<std::string, nr_stats> stats = {
     {
         "atk",
         "tim",

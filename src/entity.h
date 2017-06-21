@@ -6,7 +6,7 @@ namespace entity{
     namespace attribute {
         enum attribute {
             none = 0,
-            hp = 1 << 0,
+            def = 1 << 0,
             atk = 1 << 1,
             time = 1 << 2,
             card = 1 << 3,

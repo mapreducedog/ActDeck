@@ -1,10 +1,18 @@
 [Buildset]
-BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x0e\x00A\x00c\x00t\x00D\x00e\x00c\x00k)
 
 [CMake]
-Build Directory Count=0
-Current Build Directory Index=-1
+Build Directory Count=1
+Current Build Directory Index=0
 ProjectRootRelative=./
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=/home/mats/projects/ActDeck/ActDeck/build
+Build Type=Debug
+CMake Binary=/usr/bin/cmake
+Environment Profile=g++11
+Extra Arguments=
+Install Directory=
 
 [Defines And Includes][Compiler]
 Name=GCC
@@ -158,6 +166,27 @@ targets=2
 inclusive=0
 pattern=.hg
 targets=2
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=New Compiled Binary Launcher (2)
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=
+Executable=file:///home/mats/projects/ActDeck/ActDeck
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=ActDeck,ActDeck
+Use External Terminal=false
+Working Directory=
+isExecutable=false
 
 [Project]
 VersionControlSupport=kdevgit
