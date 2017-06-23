@@ -1,15 +1,18 @@
-cmake_minimum_required(VERSION 3.0)
-set(CMAKE_CXX_FLAGS "-std=gnu++11 -pthread -lX11")
+cmake_minimum_required(VERSION 2.6)
+#set(CMAKE_CXX_FLAGS "-std=gnu++11 -I${PROJECT_SOURCE_DIR} -pthread -lX11")
+file(GLOB_RECURSE sources src/*.cpp src/main/*.h)
+message(STATUS "SOURCES: " ${sources})
+#include_directories(${PROJECT_SOURCE_DIR})
+set(EXECUTABLE_NAME "ActDeckExe")
 
-set(EXECUTABLE_NAME "ActDeck")
 project(${EXECUTABLE_NAME})
-add_subdirectory(src)
+#add_library(src_lib ${sources})
+add_executable(${EXECUTABLE_NAME} ${sources})
 
-add_executable(${EXECUTABLE_NAME} src/main.cpp)
-target_link_libraries(${EXECUTABLE_NAME} cards_lib)
+target_compile_options(${EXECUTABLE_NAME} PUBLIC -std=gnu++11)
 
-
-
+#allow relative include
+target_include_directories(${EXECUTABLE_NAME} PUBLIC ${PROJECT_SOURCE_DIR})
 
 
 #SFML

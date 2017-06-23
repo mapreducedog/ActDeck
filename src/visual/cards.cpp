@@ -1,7 +1,8 @@
 #include "cards.h"
-#include "constants.h"
-#include "json/json.h"
-#include "json/value.h"
+#include "src/system/constants.h"
+#include "src/json/json.h"
+#include "src/json/value.h"
+#include "src/io/file.h"
 #include <array>
 #include <fstream>
 #include <string>
@@ -12,20 +13,14 @@
 #include <SFML/System/Vector2.hpp>
 
 #define default_pos sf::Vector2f(60,500)
-
+namespace visual
+{
 namespace cards 
 {
     std::array<sf::Font, 3> fontarray;
     typedef void(CardSprite::*jsonApply)(Json::Value);
     
-    Json::Value getJSON(std::string filename)
-    {
-        std::fstream fs (filename, std::fstream::in | std::fstream::out);
-        Json::Value cardJSON;
-        fs >> cardJSON;
-        return cardJSON;
-        
-    }
+
     sf::Vector2f CardSprite::getPosition()
     {
         return this->origin;
@@ -254,4 +249,6 @@ namespace cards
     }
     
 }
+}
+
 

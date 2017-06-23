@@ -10,9 +10,22 @@ ProjectRootRelative=./
 Build Directory Path=/home/mats/projects/ActDeck/ActDeck/build
 Build Type=Debug
 CMake Binary=/usr/bin/cmake
-Environment Profile=g++11
+Environment Profile=
 Extra Arguments=
-Install Directory=
+Install Directory=/usr/local
+
+[CustomDefinesAndIncludes][ProjectPath0]
+Path=.
+parseAmbiguousAsCPP=true
+parserArguments=-ferror-limit=100 -fspell-checking -Wdocumentation -Wunused-parameter -Wunreachable-code -Wall -std=c++11
+parserArgumentsC=-ferror-limit=100 -fspell-checking -Wdocumentation -Wunused-parameter -Wunreachable-code -Wall -std=c99
+
+[CustomDefinesAndIncludes][ProjectPath0][Compiler]
+Name=GCC
+
+[CustomDefinesAndIncludes][ProjectPath0][Includes]
+1=/home/mats/projects/ActDeck/ActDeck/
+2=/home/mats/projects/ActDeck/ActDeck/build/
 
 [Defines And Includes][Compiler]
 Name=GCC

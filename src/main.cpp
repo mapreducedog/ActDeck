@@ -2,18 +2,19 @@
 #include <string>
 #include <SFML/Graphics.hpp>//for sf::VideoMode
 #include <SFML/Window.hpp> //for sf::RenderWindow
-#include "cards.h"
+#include "src/visual/cards.h"
+#include "src/io/file.h"
 #include <SFML/Graphics/Text.hpp>
 
 
 
 int main(int argc, char **argv) {
-    cards::initialize();
+    visual::cards::initialize();
     sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
     sf::RenderWindow window(sf::VideoMode(desktop.width / 2, desktop.height / 2), "SFML works!");
     std::cout << desktop.width << " " << desktop.height << std::endl;
     std::string filename = "../data/1.json";
-    cards::CardSprite a(cards::getJSON(filename));
+    visual::cards::CardSprite a(io::file::getJSON(filename));
     //sf::Text b = cards::create_text();
     sf::Event event;
     window.pollEvent(event);

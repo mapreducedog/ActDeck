@@ -4,7 +4,7 @@
 
 #include <string>
 #include <array>
-#include "json/json.h"
+#include <src/json/json.h>
 #include <SFML/Graphics/Font.hpp>
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/Sprite.hpp>
@@ -13,11 +13,9 @@
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/System/Vector2.hpp>
 
-
-
+namespace visual {
 namespace cards {
     
-    Json::Value getJSON(char* filename);
     enum children_array_index {
         textfields_index = 0,
         imgfields_index = 1,
@@ -81,7 +79,8 @@ namespace cards {
     }
     void initialize();
     void cleanup();
-    Json::Value getJSON(std::string filename);
+    //Json::Value getJSON(std::string filename);
 
+}
 }
 #endif

@@ -17,8 +17,7 @@ namespace constants {
     {"out",
     "hand",
     "field",
-    "market" 
-        
+    "market"
     }};
 
     enum cardtypes_enum 
